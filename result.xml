@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="15" time="0.262" timestamp="2022-03-29T22:41:57.800461" hostname="DESKTOP-3KVSK4G"><testcase classname="test_cases" name="test_arm[370-yes]" time="0.003" /><testcase classname="test_cases" name="test_arm[400-no]" time="0.002" /><testcase classname="test_cases" name="test_arm[153-yes]" time="0.002" /><testcase classname="test_cases" name="test_palin[343-no]" time="0.008"><failure message="AssertionError: assert 'yes' == 'no'&#10;  - no&#10;  + yes">a = 343, b = 'no'
+
+    @pytest.mark.parametrize("a,b", [(343, "no"), (1220, "yes"), (5005, "yes")])
+    def test_palin(a, b):
+        r2 = assignfunc.palin(a)
+&gt;       assert r2 == b
+E       AssertionError: assert 'yes' == 'no'
+E         - no
+E         + yes
+
+test_cases.py:16: AssertionError</failure></testcase><testcase classname="test_cases" name="test_palin[1220-yes]" time="0.002"><failure message="AssertionError: assert 'no' == 'yes'&#10;  - yes&#10;  + no">a = 1220, b = 'yes'
+
+    @pytest.mark.parametrize("a,b", [(343, "no"), (1220, "yes"), (5005, "yes")])
+    def test_palin(a, b):
+        r2 = assignfunc.palin(a)
+&gt;       assert r2 == b
+E       AssertionError: assert 'no' == 'yes'
+E         - yes
+E         + no
+
+test_cases.py:16: AssertionError</failure></testcase><testcase classname="test_cases" name="test_palin[5005-yes]" time="0.001" /><testcase classname="test_cases" name="test_divby8[64-yes]" time="0.001" /><testcase classname="test_cases" name="test_divby8[60-no]" time="0.001" /><testcase classname="test_cases" name="test_divby8[56-yes]" time="0.001" /><testcase classname="test_cases" name="test_evod[64-even]" time="0.001" /><testcase classname="test_cases" name="test_evod[69-odd]" time="0.001" /><testcase classname="test_cases" name="test_evod[56-even]" time="0.002" /><testcase classname="test_cases" name="test_small[64-60-65-60]" time="0.001" /><testcase classname="test_cases" name="test_small[1-2-3-1]" time="0.001" /><testcase classname="test_cases" name="test_small[10-50-60-10]" time="0.002" /></testsuite></testsuites>
